@@ -1,30 +1,21 @@
-# Control flow
+user_prompt = True
 
-# Like giving Python a recipe to follow in certain order
-
-# Conditional Statements
-10
-#age =10
-age = str(input("input your age:  "))
-print(age.lower())
-
-if age >= 18:
+while user_prompt:
+    age = input("What is your age? ")
+    if age.isdigit() and int(age) <= 117 and int(age) != 0:
+        user_prompt = False
+    else:
+        print("Please enter your age as a digit and between 1 and 117")
+if int(age) >= 18:
     print("You can watch all movies.")
-elif age >= 16:
+elif int(age) >= 16:
     print("Sorry, you can not watch 18 rated movies, but you can watch all other movies.")
-elif age >= 13:
+elif int(age) >= 13:
     print("Sorry, you can not watch 18 and 15 rated movies, but you can watch all other movies.")
-elif age >= 8:
+elif int(age) >= 8:
     print("Sorry, you can not watch 18, 15 and 12 rated movies, but you can watch all other movies.")
 else:
     print("You can only watch U rated movies.")
-
-
-#print(str(x) + str(y) + " " + z)
-# print(white_space.lower())
- # There are no case or switch statements in Python
- # You can only use if and else
-
 
 
 
